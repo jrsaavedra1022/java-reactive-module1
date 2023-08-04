@@ -1,0 +1,602 @@
+{
+	"info": {
+		"_postman_id": "926989e1-6272-4760-b53e-994de9792245",
+		"name": "codesistemas-movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14435748"
+	},
+	"item": [
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/books/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/books/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"El viejo y el mar\",\r\n    \"editionDate\": \"2023-07-31\",\r\n    \"editorial\": \"cardenas\",\r\n    \"authors\": \"Miguel de servantes\",\r\n    \"isbn\": \"si\",\r\n    \"readed\": false,\r\n    \"timeReaded\": 225\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/books/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"El viejo y el mar\",\r\n    \"editionDate\": \"2023-07-31\",\r\n    \"editorial\": \"cardenas\",\r\n    \"authors\": \"Miguel de servantes\",\r\n    \"isbn\": \"si\",\r\n    \"readed\": false,\r\n    \"timeReaded\": 225\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/books/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/books/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"viejo y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/books/search",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"books",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "magazines",
+			"item": [
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/magazines/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"magazines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/magazines/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"magazines",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The New York Times\",\r\n    \"editionDate\": \"1851-09-18\",\r\n    \"editorial\": \"Editorials\",\r\n    \"authors\": \"Arthur Sulzberger\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/magazines/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"magazines",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The New York Times\",\r\n    \"editionDate\": \"1851-09-18\",\r\n    \"editorial\": \"Editorials\",\r\n    \"authors\": \"Arthur Sulzberger\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/magazines/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"magazines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/magazines/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"magazines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/movies/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/movies/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Interestelar\",\r\n    \"genre\": \"Ciencia ficción/Aventura\",\r\n    \"creator\": \"Christopher Nolan\",\r\n    \"duration\": 134,\r\n    \"releaseYear\": \"2014\",\r\n    \"viewed\": false,\r\n    \"timeViewed\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/movies/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Interestelar\",\r\n    \"genre\": \"Ciencia ficción/Aventura\",\r\n    \"creator\": \"Christopher Nolan\",\r\n    \"duration\": 134,\r\n    \"releaseYear\": \"2014\",\r\n    \"viewed\": false,\r\n    \"timeViewed\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/movies/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/movies/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "series",
+			"item": [
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/series/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/series/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"series",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Stranger Things\",\r\n    \"genre\": \"suspenso / ciencia ficción\",\r\n    \"creator\": \"Matt Duffer, Ross Duffer, Shawn Levy\",\r\n    \"duration\": 151,\r\n    \"releaseYear\": \"2016\",\r\n    \"viewed\": false,\r\n    \"sessionQuantity\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/series/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"series",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Stranger Things\",\r\n    \"genre\": \"suspenso / ciencia ficción\",\r\n    \"creator\": \"Matt Duffer, Ross Duffer, Shawn Levy\",\r\n    \"duration\": 151,\r\n    \"releaseYear\": \"2016\",\r\n    \"viewed\": false,\r\n    \"sessionQuantity\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/series/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/series/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chapters",
+			"item": [
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/chapters/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"chapters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/chapters/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"chapters",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": 1,\r\n    \"title\": \"The Vanishing of Will Byers\",\r\n    \"genre\": \"suspenso / ciencia ficción\",\r\n    \"creator\": \"The Duffer Brothers\",\r\n    \"duration\": 140,\r\n    \"releaseYear\": \"2016\",\r\n    \"viewed\": true,\r\n    \"timeViewed\": 120,\r\n    \"sessionNumber\": 1,\r\n    \"seriesId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/chapters/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"chapters",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": 1,\r\n    \"title\": \"The Vanishing of Will Byers\",\r\n    \"genre\": \"suspenso / ciencia ficción\",\r\n    \"creator\": \"The Duffer Brothers\",\r\n    \"duration\": 140,\r\n    \"releaseYear\": \"2016\",\r\n    \"viewed\": true,\r\n    \"timeViewed\": 120,\r\n    \"sessionNumber\": 1,\r\n    \"seriesId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/chapters/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"chapters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/chapters/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"chapters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
