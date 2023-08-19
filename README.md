@@ -72,3 +72,10 @@ server: http://localhost:8080
  
 Recuerde para ello de configurar la variable de entorno:
 ```server: http://localhost:8080```
+
+# SQS AWS
+
+## creacion de SQS
+
+- http://localhost:4566/000000000000/movies-sqs
+- awslocal sqs receive-message --queue-url "http://localhost:4566/000000000000/movies-sqs" --message-attribute-names All

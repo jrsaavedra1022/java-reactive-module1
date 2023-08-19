@@ -369,6 +369,102 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "kafka-topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/movies/kafka-topic/Peliculas-drama-cedesistemas",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								"kafka-topic",
+								"Peliculas-drama-cedesistemas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create queue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"queueName\": \"movies-sqs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/movies/aws/createQueue",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								"aws",
+								"createQueue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create message queue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 27,\r\n    \"title\": \"Parasite\",\r\n    \"genre\": \"Drama\",\r\n    \"creator\": \"Bong Joon-ho\",\r\n    \"duration\": 132,\r\n    \"releaseYear\": \"2019\",\r\n    \"viewed\": true,\r\n    \"timeViewed\": 120\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/movies/aws/postMessageQueue/movies-sqs",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								"aws",
+								"postMessageQueue",
+								"movies-sqs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get sqs list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/movies/aws/getMessagesQueue/movies-sqs",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"movies",
+								"aws",
+								"getMessagesQueue",
+								"movies-sqs"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
