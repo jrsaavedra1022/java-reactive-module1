@@ -79,3 +79,13 @@ Recuerde para ello de configurar la variable de entorno:
 
 - http://localhost:4566/000000000000/movies-sqs
 - awslocal sqs receive-message --queue-url "http://localhost:4566/000000000000/movies-sqs" --message-attribute-names All
+
+# Credenciales de autenticación
+
+## Obtener token JWT
+- email: jose.saavedra@sophossolutions.com
+- password: Admin123*
+
+## Basic Auth
+- user: user
+- password: password

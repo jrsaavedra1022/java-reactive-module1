@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS movie;
 DROP TABLE IF EXISTS chapter;
 DROP TABLE IF EXISTS series;
 DROP TABLE IF EXISTS magazine;
+DROP TABLE IF EXISTS user_auth;
 
 -- Crear las tablas
 CREATE TABLE IF NOT EXISTS book (
@@ -64,6 +65,27 @@ CREATE TABLE IF NOT EXISTS magazine (
     edition_date DATE NOT NULL,
     editorial VARCHAR(250),
     authors VARCHAR2(500),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS book (
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    edition_date DATE NOT NULL,
+    editorial VARCHAR(255),
+    authors VARCHAR2(500),
+    isbn VARCHAR(20) NOT NULL,
+    readed BOOLEAN NOT NULL,
+    time_readed INTEGER,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS user_auth (
+    id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    active BOOLEAN NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -131,3 +153,7 @@ INSERT INTO magazine (title, edition_date, editorial, authors) VALUES
 ('Arte Contemporáneo', '2023-07-30', 'Editorial E', 'Sofía Martínez'),
 ('Salud y Bienestar', '2023-08-08', 'Editorial F', 'Pedro Pérez, Laura Sánchez'),
 ('Música en Reseña', '2023-08-02', 'Editorial G', 'Daniel Ramírez');
+
+-- table user_auth
+INSERT INTO user_auth (username, email, password, active) VALUES
+('jose.saavedra', 'jose.saavedra@sophossolutions.com', '$2a$10$oLpPLZvP854Vpwk1PlSsuOInsGYOnk/jQbJUWE86yKDZ5HvOpA0KO', TRUE);
